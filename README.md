@@ -20,12 +20,12 @@ This project implements a web-based task manager with various functionalities in
 ## Setup and Installation
 1. Clone the repository:
    ```bash
-   git clone [YOUR REPO URL]
+   git clone [REPO URL]
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd [Your Repository Name]
+   cd [Repository Name]
    ```
 
 3. Install dependencies:
