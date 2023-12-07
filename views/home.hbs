@@ -1,0 +1,54 @@
+<h1>Welcome to Task Manager</h1>
+<p>Manage your tasks efficiently.</p>
+
+<h1>Task List</h1>
+
+<!-- ... PART 5 ... -->
+<form action="/" method="GET">
+    <input type="text" name="titleQ" placeholder="Title Contains...">
+    <input type="text" name="tagQ" placeholder="Has Tag...">
+    <button type="submit">Filter</button>
+</form>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>
+      Priority
+      <a href="/?sort-by=priority&sort-order=asc">⬆️</a>
+      <a href="/?sort-by=priority&sort-order=desc">⬇️</a>
+      </th>
+      <th>
+      Due Date
+      <a href="/?sort-by=due-date&sort-order=asc">⬆️</a>
+      <a href="/?sort-by=due-date&sort-order=desc">⬇️</a>
+      </th>
+      <th>Pinned</th>
+      <th>Tags</th>
+      <th>Progress</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tasks}}
+    <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.priority}}</td>
+      <td>{{this.due-date}}</td>
+      <td>{{this.pinned}}</td>
+      <td>{{this.tags}}</td>
+      <td>{{this.progress}}</td>
+
+      <td>
+        {{#unless this.pinned}}
+        <a href="/pin/{{@index}}">Pin</a>
+        {{else}}
+        <a href="/unpin/{{@index}}">Unpin</a>
+        {{/unless}}
+      </td>
+
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,37 @@
+<h1>Add New Task</h1>
+
+<form action="/add" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title" required>
+
+    <label>Description:</label>
+    <textarea name="description"></textarea>
+
+    <label>Priority:</label>
+    <select name="priority">
+        <option value="1">1 (Least Urgent)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Most Urgent)</option>
+    </select>
+
+    <label>Due Date:</label>
+    <input type="date" name="due-date" required>
+
+    <label>Pinned:</label>
+    <input type="radio" name="pinned" value="true">Yes
+    <input type="radio" name="pinned" value="false" checked>No
+
+    <label>Tags (separate with comma):</label>
+    <input type="text" name="tags">
+
+    <label>Progress:</label>
+    <select name="progress">
+        <option value="not-started">Not Started</option>
+        <option value="in-progress">In Progress</option>
+        <option value="done">Done</option>
+    </select>
+
+    <button type="submit">Add Task</button>
+</form>
